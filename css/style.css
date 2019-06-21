@@ -1,0 +1,94 @@
+* {
+    margin:0;
+    padding:0;
+  }
+
+html {
+    box-sizing: border-box;
+    font-family: Lato,Optima,Segoe,"Segoe UI",Candara,Calibri,Arial,sans-serif;
+    font-size: 16px;
+} 
+
+.mainContainer 
+{
+    background-color: hsl(270, 100%, 90%);
+    height: 100vh;
+}
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 4rem repeat(2, 1fr) 6.5rem 2rem;
+    grid-template-areas: 
+        "ga_version . . . ga_menu"
+        ". . ga_tpart1 . ."
+        ". . ga_tpart2 . ."
+        ". . ga_tpart3 . ."
+        "ga_footer ga_footer . . .";
+    align-items: center;    
+
+}
+
+.version {
+    grid-area: ga_version;
+    justify-self: start;
+    align-self: flex-start;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color:hsl(270, 100%, 30%);
+    margin-top: .2rem;
+    margin-left: .3rem;
+}
+
+.menu {
+    grid-area: ga_menu;
+    justify-self: end;
+    align-self: flex-start;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: .5rem;
+    margin-right: .3rem;
+}
+
+.menu-btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 0.2rem;
+    background: hsl(270, 100%, 60%);
+    color: #fff;   
+    padding: 0.1rem 0.3rem;
+    transition: 0.5s;
+}
+
+.menu-btn:hover {
+    box-shadow: inset 0 0 0 1px hsl(270, 100%, 60%);
+    background: none;
+    color: hsl(270, 100%, 60%);
+}
+
+.tpart1 {
+    grid-area: ga_tpart1; 
+    font-size: 8rem; 
+    font-weight: 900; 
+    color: #fffce1;  
+}
+
+.tpart2 {
+    grid-area: ga_tpart2;   
+    font-size: 6.2rem;  
+    font-weight: 900;  
+    color: hsl(120, 0%, 40%);
+}
+
+.tpart3 {
+    grid-area: ga_tpart3; 
+    font-size: 5.8rem; 
+    font-weight: 900;    
+    color: hsl(120, 0%, 40%);
+}
+
+
+/* EOF ------------------------------------------------- */
